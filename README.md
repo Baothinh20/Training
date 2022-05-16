@@ -2,9 +2,15 @@
 # OpenStack AIO
 ## Author: Tran Bao Thinh
 ## Table of contents
-### I.Create Ubuntu virtual machine
-### II.Setup OpenStack AIO inside VM with Kolla
-## I.Create Ubuntu virtual machine
+### I. Overview
+#### A.Openstack
+#### B.Kolla-Ansible
+### II.Create Ubuntu virtual machine
+### III.Setup OpenStack AIO inside VM with Kolla
+## I. Overview
+1. Overview:
+
+## II.Create Ubuntu virtual machine
 ### Installing
 - Ubuntu download link: https://ubuntu.com/download/desktop
 
@@ -17,7 +23,7 @@ Note: - My ubuntu version is 22.04 and my virtual box version is 6.1.34
 
 
 
-## II.Setup OpenStack AIO inside VM with Kolla
+## III.Setup OpenStack AIO inside VM with Kolla
 ### 1. Update and Install dependencies
 ```bash
 $ sudo apt update 
