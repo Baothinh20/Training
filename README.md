@@ -164,10 +164,6 @@ Note: using a virtual environment before run.
  nova_compute_virt_type: "qemu"
 
  enable_haproxy: "no"
-
- enable_cinder: "yes"
- enable_cinder_backup: "no"
- enable_cinder_backend_lvm: "yes"
  ```
 ### 4. DEPLOY OPENSTACK
  - Bootstrap servers with kolla deploy dependencies
@@ -179,3 +175,25 @@ Note: using a virtual environment before run.
  - Deploy
 
 ### 5. Using Openstack
+
+- Install Openstack CLI:
+
+ ```bash
+$ pip install python-openstackclient python-glanceclient python-neutronclient
+ ```
+ 
+ - Create /etc/kolla/admin-openrc.sh
+
+ ```bash
+$ source /etc/kolla/admin-openrc.sh
+ ```
+ 
+ - Generate token:
+
+ ```bash
+$ openstack token issue
+ ```
+ 
+ - Openstack Login page
+
+ - Openstack Dashboard
