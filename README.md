@@ -9,6 +9,9 @@
 ### III.Setup and Deloy OpenStack AIO inside VM with Kolla
 ## I. Overview
 1. Overview:
+
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/openstackoverview.png)
+
  - OpenStack is an open source platform that uses pooled virtual resources to build and manage private and public clouds
     - It is mostly deployed as infrastructure-as-a-service (IaaS)
     
@@ -17,6 +20,8 @@
     - OpenStack began in 2010 as a joint project of Rackspace Hosting and NASA. As of 2012, it was managed by the OpenStack Foundation, a non-profit corporate entity       established in September 2012[3] to promote OpenStack software and its community.
     - 
 2. Core Components:
+
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/Core%20Components.png)
 
   - Nova: The OpenStack project that provides a way to provision compute instances (aka virtual servers). Nova supports creating virtual machines.
 
@@ -53,9 +58,17 @@ Note: - My ubuntu version is 20.04 and my virtual box version is 6.1.34
   - Virtual machine requirement:
   
     - 2 network interfaces:
+    
+     -enp0s3: 10.0.2.15/24
+     
+     -enp0s8: 10.0.3.15/24
+
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/ifconfig.png)
 
     - 8GB main memory
     - 2 disk with 20GB
+
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/setting_virtualbox.png)
 
 ## III.Setup and Deloy OpenStack AIO inside VM with Kolla ( using a virtual environment )
 
@@ -139,6 +152,10 @@ Note: using a virtual environment before run.
  $ ansible -i all-in-one all -m ping
  ```
 
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/ping.png)
+
+ping success
+
 - Create diskspace partition for Cinder:
 
  ```bash
@@ -168,12 +185,23 @@ Note: using a virtual environment before run.
 ### 4. DEPLOY OPENSTACK
  - Bootstrap servers with kolla deploy dependencies
 
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/boottrap.png)
+
  - Do pre-deployment checks for hosts
+
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/Precheck.png)
 
  - Pull Images to VM
  
+ ![alt text](https://github.com/Baothinh20/Training/blob/main/img/pull.png)
+ 
  - Deploy
 
+ ![alt text](https://github.com/Baothinh20/Training/blob/main/img/deloy.png)
+
+ - Post deloy: ( Create /etc/kolla/admin-openrc.sh )
+
+ 
 ### 5. Using Openstack
 
 - Install Openstack CLI:
@@ -190,10 +218,16 @@ $ source /etc/kolla/admin-openrc.sh
  
  - Generate token:
 
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/token.png)
+
  ```bash
 $ openstack token issue
  ```
  
  - Openstack Login page
 
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/loginpage.png)
+
  - Openstack Dashboard
+
+![alt text](https://github.com/Baothinh20/Training/blob/main/img/Openstack%20Dashboard.png)
