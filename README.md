@@ -12,9 +12,9 @@
 #### 1. Update and Install dependencies
 #### 2. Setup and create virtual environment
 #### 3. Install Ansible and Kolla-ansible
-#### 4. DEPLOY OPENSTACK
+#### 4. Deloy openstack
 #### 5. Using Openstack
-### IV.REFERENCES
+### IV. References
 
 
 ## I. Overview
@@ -188,11 +188,9 @@ ping success
  neutron_external_interface: enp0s8
  kolla_internal_vip_address: 10.0.2.15
 
- nova_compute_virt_type: "qemu"
-
  enable_haproxy: "no"
  ```
-### 4. DEPLOY OPENSTACK
+### 4. Deloy openstack
  - Bootstrap servers with kolla deploy dependencies
 
 ![alt text](https://github.com/Baothinh20/Training/blob/main/img/boottrap.png)
@@ -242,10 +240,12 @@ $ openstack token issue
 
 ![alt text](https://github.com/Baothinh20/Training/blob/main/img/Openstack%20Dashboard.png)
 
-## IV.REFERENCES:
+## IV. References:
 
 [User Guide of Kolla Ansible - Openstack.org](https://docs.openstack.org/kolla-ansible/latest/user/index.html)
 
 [Openstack-wiki](https://en.wikipedia.org/wiki/OpenStack)
 
-[Example-github](https://github.com/vietstacker/Viettel-Digital-Talent-Program-2021/blob/main/Phase-1-Practices/Week-3/Julian-P-Nguyen/Openstack/imgs/success-deploy.png)
+[Example-github](https://github.com/vietstacker/Viettel-Digital-Talent-Program-2021/tree/main/Phase-1-Practices/Week-3/Julian-P-Nguyen/Openstack)
+
+[Deploy All-in-one Openstack - Cloud365](https://news.cloud365.vn/openstack-kolla-phan-1-huong-dan-cai-dat-openstack-train-all-in-one-bang-kolla-ansible/)
