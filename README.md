@@ -60,32 +60,33 @@ Note: - My ubuntu version is 20.04 and my virtual box version is 6.1.34
 ## III.Setup and Deloy OpenStack AIO inside VM with Kolla ( using a virtual environment )
 
 ### 1. Update and Install dependencies
-```bash
-$ sudo apt update 
-```
 
-```bash
-$ sudo apt install python3-dev libffi-dev gcc libssl-dev
-```
+ ```bash
+ $ sudo apt update 
+ ```
+
+ ```bash
+ $ sudo apt install python3-dev libffi-dev gcc libssl-dev
+ ```
 
 ### 2. Setup and create virtual environment
 - Install the virtual environment dependencies (Using virtualenv)
 
-```bash
-$ sudo apt install python3-venv
-```
+ ```bash
+ $ sudo apt install python3-venv
+ ```
 
 - create virtual environment
 
-```bash
-$ python3 -m venv /path/to/venv
-$ source /path/to/venv/bin/activate
-```
+ ```bash
+ $ python3 -m venv /path/to/venv
+ $ source /path/to/venv/bin/activate
+ ```
 - Check the last version:
 
-```bash
-$ pip install -U pip
-```
+ ```bash
+ $ pip install -U pip
+ ```
 
 ### 3. Install Ansible and Kolla-ansible
 
@@ -93,79 +94,79 @@ Note: using a virtual environment before run.
 
 - Install Ansible
 
-```bash
-$ pip install 'ansible>=4,<6'
-```
+ ```bash
+ $ pip install 'ansible>=4,<6'
+ ```
 
 - Install Kolla-ansible:
 
-```bash
-$pip install git+https://opendev.org/openstack/kolla-ansible@master
-```
+ ```bash
+ $pip install git+https://opendev.org/openstack/kolla-ansible@master
+ ```
 
 - Install Ansible Galaxy dependencies:
 
-```bash
-$ kolla-ansible install-deps
-```
+ ```bash
+ $ kolla-ansible install-deps
+ ```
 
 ### 3. Config Ansible and Kolla-ansible 
 
 - Create the /etc/kolla directory:
 
-```bash
-$ sudo mkdir -p /etc/kolla
-$ sudo chown $USER:$USER /etc/kolla
-```
+ ```bash
+ $ sudo mkdir -p /etc/kolla
+ $ sudo chown $USER:$USER /etc/kolla
+ ```
 
 - Copy globals.yml and passwords.yml to /etc/kolla directory:
 
-```bash
-$ cp -r /path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
-```
+ ```bash
+ $ cp -r /path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
+ ```
 
 - Configure Ansible:
 
-```bash
-$ sudo mkdir -p /etc/ansible
-$ config="[defaults]\nhost_key_checking=False\npipelining=True\nforks=100"
-$ echo -e $config >> /etc/ansible/ansible.cfg
-```
+ ```bash
+ $ sudo mkdir -p /etc/ansible
+ $ config="[defaults]\nhost_key_checking=False\npipelining=True\nforks=100"
+ $ echo -e $config >> /etc/ansible/ansible.cfg
+ ```
 
 - Check configurations:
 
-```bash
-$ ansible -i all-in-one all -m ping
-```
+ ```bash
+ $ ansible -i all-in-one all -m ping
+ ```
 
 - Create diskspace partition for Cinder:
 
-```bash
-$ sudo pvcreate /dev/sdb
-$ sudo vgcreate cinder-volumes /dev/sdb
-```
+ ```bash
+ $ sudo pvcreate /dev/sdb
+ $ sudo vgcreate cinder-volumes /dev/sdb
+ ```
 
 - Generate Passwords for Kolla:
 
-```bash
-$ kolla-genpwd
-```
+ ```bash
+ $ kolla-genpwd
+ ```
 
 - Configure globals.yml:
 
-```bash
-kolla_base_distro: "ubuntu"
+ ```bash
+ kolla_base_distro: "ubuntu"
 
-network_interface: enp0s3
-neutron_external_interface: enp0s8
-kolla_internal_vip_address: 10.0.2.15
+ network_interface: enp0s3
+ neutron_external_interface: enp0s8
+ kolla_internal_vip_address: 10.0.2.15
 
-nova_compute_virt_type: "qemu"
+ nova_compute_virt_type: "qemu"
 
-enable_haproxy: "no"
+ enable_haproxy: "no"
 
-enable_cinder: "yes"
-enable_cinder_backup: "no"
-enable_cinder_backend_lvm: "yes"
-```
+ enable_cinder: "yes"
+ enable_cinder_backup: "no"
+ enable_cinder_backend_lvm: "yes"
+ ```
 ### 4. DEPLOY OPENSTACK
