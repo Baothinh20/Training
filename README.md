@@ -2,19 +2,19 @@
 # OpenStack AIO
 ## Author: Tran Bao Thinh
 ## Table of contents
-### I. Overview
-#### 1. Overview
-#### 2. Core Components
-### II.Create Ubuntu virtual machine
-#### A.Openstack
-#### B.Kolla-Ansible
-### III.Setup and Deloy OpenStack AIO inside VM with Kolla
-#### 1. Update and Install dependencies
-#### 2. Setup and create virtual environment
-#### 3. Install Ansible and Kolla-ansible
-#### 4. Deloy openstack
-#### 5. Using Openstack
-### IV. References
+ ### I. Overview
+  #### 1. Overview
+  #### 2. Core Components
+ ### II.Create Ubuntu virtual machine
+  #### A.Openstack
+  #### B.Kolla-Ansible
+ ### III.Setup and Deloy OpenStack AIO inside VM with Kolla
+  #### 1. Update and Install dependencies
+  #### 2. Setup and create virtual environment
+  #### 3. Install Ansible and Kolla-ansible
+  #### 4. Deloy openstack
+  #### 5. Using Openstack
+ ### IV. References
 
 
 ## I. Overview
@@ -69,9 +69,9 @@ Note: - My ubuntu version is 20.04 and my virtual box version is 6.1.34
   
     - 2 network interfaces:
     
-     -enp0s3: 10.0.2.15/24
+     - enp0s3: 10.0.2.15/24
      
-     -enp0s8: 10.0.3.15/24
+     - enp0s8: 10.0.3.15/24
 
 ![alt text](https://github.com/Baothinh20/Training/blob/main/img/ifconfig.png)
 
