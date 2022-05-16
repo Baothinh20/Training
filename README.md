@@ -170,3 +170,12 @@ Note: using a virtual environment before run.
  enable_cinder_backend_lvm: "yes"
  ```
 ### 4. DEPLOY OPENSTACK
+ - Bootstrap servers with kolla deploy dependencies
+
+ - Do pre-deployment checks for hosts
+
+ - Pull Images to VM
+ 
+ - Deploy
+
+### 5. Using Openstack
