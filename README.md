@@ -6,9 +6,9 @@
   #### 1. Overview
   #### 2. Core Components
  ### II.Create Ubuntu virtual machine
-  #### A.Openstack
-  #### B.Kolla-Ansible
- ### III.Setup and Deloy OpenStack AIO inside VM with Kolla
+  #### A. Openstack
+  #### B. Kolla-Ansible
+ ### III. Setup and Deloy OpenStack AIO inside VM with Kolla
   #### 1. Update and Install dependencies
   #### 2. Setup and create virtual environment
   #### 3. Install Ansible and Kolla-ansible
