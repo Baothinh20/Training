@@ -3,10 +3,20 @@
 ## Author: Tran Bao Thinh
 ## Table of contents
 ### I. Overview
+#### 1. Overview
+#### 2. Core Components
+### II.Create Ubuntu virtual machine
 #### A.Openstack
 #### B.Kolla-Ansible
-### II.Create Ubuntu virtual machine
 ### III.Setup and Deloy OpenStack AIO inside VM with Kolla
+#### 1. Update and Install dependencies
+#### 2. Setup and create virtual environment
+#### 3. Install Ansible and Kolla-ansible
+#### 4. DEPLOY OPENSTACK
+#### 5. Using Openstack
+### IV.REFERENCES
+
+
 ## I. Overview
 1. Overview:
 
@@ -231,3 +241,11 @@ $ openstack token issue
  - Openstack Dashboard
 
 ![alt text](https://github.com/Baothinh20/Training/blob/main/img/Openstack%20Dashboard.png)
+
+## IV.REFERENCES:
+
+[User Guide of Kolla Ansible - Openstack.org](https://docs.openstack.org/kolla-ansible/latest/user/index.html)
+
+[Openstack-wiki](https://en.wikipedia.org/wiki/OpenStack)
+
+[Example-github](https://github.com/vietstacker/Viettel-Digital-Talent-Program-2021/blob/main/Phase-1-Practices/Week-3/Julian-P-Nguyen/Openstack/imgs/success-deploy.png)
